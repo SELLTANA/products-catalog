@@ -3,8 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
-    "dev:all": "concurrently \"npm run dev\" \"npm run json-server\"",
+    "dev": "concurrently \"next dev --turbopack\" \"npm run json-server\"",
     "build": "next build",
     "start": "next start -p 7000",
     "json-server": "json-server src/api/db.json --port 4000",

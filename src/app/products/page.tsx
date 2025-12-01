@@ -1,26 +1,19 @@
-'use client'
+'use client';
 
-import { useEffect, useState } from 'react'
-import Product from './Product'
-
-type ProductType = {
-  id: string
-  name: string
-  price: number
-  currency: string
-  imageUrl?: string
-}
+import { useEffect, useState } from 'react';
+import Product from './Product';
+import ProductModel  from '../models/product';
 
 const PRODUCTS_API_ENDPOINT = `${process.env.NEXT_PUBLIC_API_BASE_URL}/products`
 
 export default function ProductListPage() {
-  const [products, setProducts] = useState<ProductType[]>([])
+  const [products, setProducts] = useState<ProductModel[]>([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
     async function fetchProducts() {
-      // TODO: fetch products from API
+      // TODO: fetch products from API - use PRODUCTS_API_ENDPOINT variable
     }
 
     fetchProducts()
